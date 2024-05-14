@@ -20,9 +20,9 @@ class MovieRepositoryImpl(
     override suspend fun getMovies(): List<Movie> =
         withContext(contextProvider.context()) {
             val savedMoviesDeferred = async { movieDao.getSavedMovies() }
-            val responseDeferred = async { movieApiService.getMovies(API_KEY).execute() }
+
             val savedMovies = savedMoviesDeferred.await()
-            val apiMovies = responseDeferred.await().body()?.movies
+            val apiMovies = try { movieApiService.getMovies(API_KEY).movies } catch(e: Exception) { null }
 
             apiMovies ?: savedMovies
         }
