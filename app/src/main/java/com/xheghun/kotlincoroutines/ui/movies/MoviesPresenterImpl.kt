@@ -1,6 +1,5 @@
 package com.xheghun.kotlincoroutines.ui.movies
 
-import android.util.Log
 import com.xheghun.kotlincoroutines.domain.repository.MovieRepository
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
@@ -27,7 +26,6 @@ class MoviesPresenterImpl(private val movieRepository: MovieRepository) : Movies
     private lateinit var moviesView: MoviesView
 
     override fun setView(moviesView: MoviesView) {
-        Log.d("MoviesPresenterImpl", "setView")
         this.moviesView = moviesView
     }
 
@@ -37,10 +35,8 @@ class MoviesPresenterImpl(private val movieRepository: MovieRepository) : Movies
             val result = kotlin.runCatching { movieRepository.getMovies() }
 
             result.onSuccess { movies ->
-                Log.d("", "getData ${movies.size}")
                 moviesView.showMovies(movies)
             }.onFailure { throwable ->
-                Log.e("", "getData", throwable)
                 handleError(throwable)
             }
         }

@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.jetbrains.kotlin.kapt)
+    alias(libs.plugins.google.kotlin.ksp)
 }
 
 android {
@@ -57,7 +57,7 @@ dependencies {
 
     implementation(libs.androidx.room)
     implementation(libs.androidx.room.kotlin)
-    kapt(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 
     implementation(libs.koin.core)
     implementation(libs.koin.android)
