@@ -1,8 +1,8 @@
-
 package com.xheghun.kotlincoroutines.di
 
 import com.xheghun.kotlincoroutines.ui.movies.MoviesPresenter
 import com.xheghun.kotlincoroutines.ui.movies.MoviesPresenterImpl
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 /**
@@ -10,5 +10,5 @@ import org.koin.dsl.module
  */
 
 fun presenterModule() = module {
-  single { MoviesPresenterImpl(get()) as MoviesPresenter }
+    viewModel { MoviesPresenterImpl(get()) }
 }

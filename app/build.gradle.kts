@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.swipetorefresh)
+    implementation(libs.androidx.lifecycle.viewmodel)
 
     implementation(libs.squareup.retrofit)
     implementation(libs.squareup.logging.interceptor)

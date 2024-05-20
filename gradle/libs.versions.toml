@@ -22,6 +22,7 @@ swipeToRefershVersion = "1.2.0-alpha01"
 ktxCoroutine = "1.3.3"
 nhaMockitoVersion = "2.2.0"
 androidSupport = "1.0.0"
+viewModelVersion = "2.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,6 +52,8 @@ powermock-module = { group = "org.powermock", name = "powermock-module-junit4", 
 powermock-mockito = { group = "org.powermock", name = "powermock-api-mockito2", version.ref = "powermockVersion" }
 androidx-swipetorefresh = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swipeToRefershVersion" }
 android-support = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "androidSupport" }
+androidx-lifecycle-viewmodel = {group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "viewModelVersion"}
+#koin-viewmodel = {group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "viewModelVersion"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

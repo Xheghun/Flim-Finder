@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.xheghun.kotlincoroutines.data.model.Movie
 import com.xheghun.kotlincoroutines.databinding.ActivityMoviesBinding
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MoviesActivity : AppCompatActivity(), MoviesView {
 
-    private val presenter by inject<MoviesPresenter>()
+    private val presenter: MoviesPresenter by viewModel<MoviesPresenterImpl>()
     private val movieAdapter by lazy { MovieAdapter() }
     private lateinit var binding: ActivityMoviesBinding
 
@@ -45,10 +45,5 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
     override fun onStart() {
         super.onStart()
         presenter.getData()
-    }
-
-    override fun onStop() {
-        presenter.stop()
-        super.onStop()
     }
 }
