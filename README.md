@@ -1,6 +1,6 @@
 ## Film Finder
 
-An app displays a list of trending/popular movies
+An app displays a list of trending/popular movies using The Movie DB [API](https://api.themoviedb.org/)
 
 ## About 
 this project demonstrates the use of modern android apis with emphasis on Coroutines & Dependency Injection.\
