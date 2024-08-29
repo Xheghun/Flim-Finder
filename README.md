@@ -3,7 +3,7 @@
 An app displays a list of trending/popular movies
 
 ## About 
-this project demonstrates the use of modern android apis with emphasis on Coroutines & Dependency Injection
+this project demonstrates the use of modern android apis with emphasis on Coroutines & Dependency Injection.\
  here's a non exhaustive list of tools used.
 #### Dev
 - [Koin](https://insert-koin.io/)
